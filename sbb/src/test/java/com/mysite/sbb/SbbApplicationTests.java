@@ -42,6 +42,8 @@ class SbbApplicationTests {
 //		q2.setContent("id는 자동으로 생성되나요?");
 //		q2.setCreateDate(LocalDateTime.now());
 //		this.questionRepository.save(q2);
+	
+	
 //		@Test
 //		void testJpaFindAll() {
 //		List<Question> all = this.questionRepository.findAll();
@@ -87,7 +89,7 @@ class SbbApplicationTests {
 //	질문 수정하기
 //	@Test
 //	void testJpaEdit() {
-//		Optional<Question> oq = this.questionRepository.findById(19);
+//		Optional<Question> oq = this.questionRepository.findById(1);
 //		assertTrue(oq.isPresent());
 		
 //		assertTrue 는 괄호 안의 값이 true or false 인지 테스트. false 라면 리턴하여 테스트 종료
@@ -102,7 +104,7 @@ class SbbApplicationTests {
 //	@Test
 //	void testJpaDelete() {
 //		assertEquals(2, this.questionRepository.count());
-//		Optional<Question> oq = this.questionRepository.findById(19);
+//		Optional<Question> oq = this.questionRepository.findById(1);
 //		assertTrue(oq.isPresent());
 //		Question q = oq.get();
 //		this.questionRepository.delete(q);
@@ -113,7 +115,7 @@ class SbbApplicationTests {
 //	답변 데이터 저장하기
 //	@Test
 //	void TestJpaAnswerSave() {
-//		Optional<Question> oq = this.questionRepository.findById(20);
+//		Optional<Question> oq = this.questionRepository.findById(2);
 //		assertTrue(oq.isPresent());
 //		Question q= oq.get();
 //		
@@ -141,7 +143,7 @@ class SbbApplicationTests {
 	@Transactional
 	@Test
 	void testJpaFindAnswersToQuestions() {
-		Optional<Question> oq = this.questionRepository.findById(20);
+		Optional<Question> oq = this.questionRepository.findById(2);
 		assertTrue(oq.isPresent());
 		Question q = oq.get();
 		
